@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SERVICE="com.system76.Scheduler"
+SCHEDPATH="/com/system76/Scheduler"
+INTERFACE="com.system76.Scheduler"
+METHOD="SetForegroundProcess"
+
+/usr/bin/dbus-monitor "destination=$SERVICE,path=$SCHEDPATH,interface=$INTERFACE,member=$METHOD" |
+    while true; do
+        read -r method call time sender _ dest serial path interface member
+        read -r type pid
+        [ "$member" = "member=$METHOD" ] && /usr/bin/qdbus --system $SERVICE "$SCHEDPATH" $INTERFACE.$METHOD "$pid"
+    done

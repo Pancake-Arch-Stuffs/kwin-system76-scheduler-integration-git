@@ -1,0 +1,7 @@
+post_install() {
+    echo
+    echo "Execute the following command to enable system76-scheduler dbus proxy:"
+    echo
+    echo "      systemctl enable --user com.system76.Scheduler.dbus-proxy"
+    echo
+}

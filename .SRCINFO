@@ -1,0 +1,16 @@
+pkgbase = kwin-system76-scheduler-integration-git
+	pkgdesc = A kwin script that notify the System76 Scheduler which app has focus so it can be prioritized
+	pkgver = r313.8710583
+	pkgrel = 1
+	url = https://github.com/maxiberta/kwin-system76-scheduler-integration
+	install = kwin-system76-scheduler-integration-git.install
+	arch = any
+	license = GPL3
+	makedepends = kpackage
+	depends = kwin
+	provides = kwin-system76-scheduler-integration
+	conflicts = kwin-system76-scheduler-integration
+	source = kwin-system76-scheduler-integration::git+https://github.com/maxiberta/kwin-system76-scheduler-integration
+	md5sums = SKIP
+
+pkgname = kwin-system76-scheduler-integration-git

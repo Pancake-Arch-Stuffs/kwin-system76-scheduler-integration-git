@@ -1,0 +1,4 @@
+*.tar.zst
+src/
+pkg/
+kwin-system76-scheduler-integration/
